@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Lottie Test</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.13.0/lottie.min.js"></script>
+  <style>
+    body, html { margin:0; height:100%; background:#000; display:flex; justify-content:center; align-items:center; }
+    #animation { width:500px; height:500px; }
+  </style>
+</head>
+<body>
+<div id="animation"></div>
+<script>
+  const anim = lottie.loadAnimation({
+    container: document.getElementById('animation'),
+    renderer: 'canvas',
+    loop: true,
+    autoplay: true,
+    path: 'data.json'
+  });
+</script>
+</body>
+</html>
+
+//just launch the project
