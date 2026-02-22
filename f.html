@@ -2,15 +2,52 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Lottie Test</title>
+  <title>Lottie with PNG Background</title>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.13.0/lottie.min.js"></script>
   <style>
-    body, html { margin:0; height:100%; background:#000; display:flex; justify-content:center; align-items:center; }
-    #animation { width:500px; height:500px; }
+    html, body {
+      margin: 0;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #000; /* фон за пределами анимации */
+    }
+
+    #animation-wrapper {
+      position: relative;
+      width: 500px;  /* задаём размер анимации */
+      height: 500px; /* фиксированная высота */
+      flex-shrink: 0; /* чтобы не ужималось в flex контейнере */
+    }
+
+    #background {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url('background.png') no-repeat center center;
+      background-size: contain; /* фон под размер контейнера */
+      z-index: 0;
+    }
+
+    #animation {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+    }
   </style>
 </head>
 <body>
-<div id="animation"></div>
+<div id="animation-wrapper">
+  <div id="background"></div>
+  <div id="animation"></div>
+</div>
+
 <script>
   const anim = lottie.loadAnimation({
     container: document.getElementById('animation'),
@@ -22,5 +59,3 @@
 </script>
 </body>
 </html>
-
-//just launch the project
