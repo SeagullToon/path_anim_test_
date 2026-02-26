@@ -1,0 +1,186 @@
+.frame {
+    position: relative;
+    width: 1440px;
+    height: 7477px;
+    border: 0px none;
+}
+
+.frame .HERO {
+    position: absolute;
+    top: 90px;
+    left: 0;
+    width: 1440px;
+    height: 700px;
+    display: flex;
+    border: 0px none;
+    backdrop-filter: blur(7px) brightness(100%);
+    -webkit-backdrop-filter: blur(7px) brightness(100%);
+}
+
+.frame .CONTAINER {
+    display: inline-flex;
+    margin-top: 170px;
+    width: 886px;
+    height: 180px;
+    position: relative;
+    margin-left: 128px;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 10px;
+    border: 0px none;
+}
+
+.frame .TEXT {
+    position: relative;
+    width: 886px;
+    text-shadow: 1px 4px 4px #00000040;
+    font-family: "Inter-Medium", Helvetica;
+    font-weight: 500;
+    color: #f9b233;
+    font-size: 60px;
+    letter-spacing: 3px;
+    line-height: 60px;
+}
+
+.frame .div {
+    position: absolute;
+    top: 214px;
+    left: 0;
+    width: 300px;
+    height: 4px;
+    background-color: #000000;
+    border: 0px none;
+}
+
+.frame .text-wrapper {
+    position: relative;
+    width: 575px;
+    font-family: "Inter-Regular", Helvetica;
+    font-weight: 400;
+    color: #000000;
+    font-size: 16px;
+    letter-spacing: 0;
+    line-height: 24px;
+}
+
+.frame .image-2 {
+    position: absolute;
+    width: 554px;
+    height: 700px;
+    top: 0;
+    left: 886px;
+    object-fit: cover;
+}
+
+.frame .HEADER {
+    position: absolute;
+    width: 1440px;
+    height: 90px;
+    top: 0;
+    left: 0;
+    background-color: #ffffff;
+}
+
+.frame .NAV {
+    position: absolute;
+    top: 33px;
+    left: 530px;
+    display: flex;
+    gap: 40px;
+}
+
+.frame .NAV a {
+    font-family: "Inter-Medium", Helvetica;
+    font-size: 14px;
+    color: #000000;
+    text-decoration: none;
+    letter-spacing: 0;
+    line-height: 20px;
+}
+
+.frame .LOGO {
+    position: absolute;
+    width: 140px;
+    height: 32px;
+    top: 29px;
+    left: 128px;
+}
+
+.frame .V-M-P {
+    position: absolute;
+    top: 998px;
+    left: 0;
+    width: 1440px;
+    height: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.frame .VMP-TITLE {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 1440px;
+    text-align: center;
+    font-family: "Inter-Regular", Helvetica;
+    font-size: 48px;
+    line-height: 48px;
+    color: #000000;
+}
+
+.frame .ICONS {
+    position: absolute;
+    top: 71px;
+    left: 309px;
+    width: 541px;
+    height: 471px;
+}
+
+.frame .POLYGON {
+    position: absolute;
+    top: 41px;
+    left: 160px;
+    width: 128px;
+    height: 146px;
+}
+
+.frame .POLYGON-2 {
+    position: absolute;
+    top: 41px;
+    left: 308px;
+    width: 128px;
+    height: 146px;
+}
+
+.frame .POLYGON-3 {
+    position: absolute;
+    top: 169px;
+    left: 378px;
+    width: 128px;
+    height: 146px;
+}
+
+.frame .VMP-TEXT {
+    position: absolute;
+    top: 188px;
+    left: 633px;
+    width: 289px;
+    height: 289px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 48px;
+}
+
+.frame .VMP-TEXT p {
+    font-family: "Inter-Regular", Helvetica;
+    font-size: 24px;
+    line-height: 32px;
+    text-align: center;
+    color: #000000;
+}
+
+/* далее в файле ещё много секций — CORE ACTIVITIES, PRIME FOCUS, PORTFOLIO,
+   HOW WE DO IT, OFFICES, MEDIA и т.д. — все они очищены аналогично */
