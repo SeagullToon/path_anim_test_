@@ -2,60 +2,66 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Lottie with PNG Background</title>
+  <title>Lottie Full Quality</title>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.13.0/lottie.min.js"></script>
+
   <style>
     html, body {
       margin: 0;
-      height: 100%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      background: #000; /* фон за пределами анимации */
+      background: #000;
     }
 
+    /* контейнер на всю ширину экрана с правильной пропорцией */
     #animation-wrapper {
       position: relative;
-      width: 500px;  /* задаём размер анимации */
-      height: 500px; /* фиксированная высота */
-      flex-shrink: 0; /* чтобы не ужималось в flex контейнере */
+      width: 100vw;
+      height: calc(100vw * 7477 / 1440);
+      overflow: hidden;
     }
 
+    /* PNG фон */
     #background {
       position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: url('background.png') no-repeat center center;
-      background-size: contain; /* фон под размер контейнера */
+      inset: 0;
+      background: url('background.png') no-repeat center top;
+      background-size: 100% 100%;
       z-index: 0;
     }
 
+    /* Lottie */
     #animation {
       position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
+      inset: 0;
       z-index: 1;
     }
   </style>
 </head>
+
 <body>
+
 <div id="animation-wrapper">
   <div id="background"></div>
   <div id="animation"></div>
 </div>
 
 <script>
+  const container = document.getElementById('animation');
+
   const anim = lottie.loadAnimation({
-    container: document.getElementById('animation'),
+    container: container,
     renderer: 'canvas',
     loop: true,
     autoplay: true,
     path: 'data.json'
   });
+
+  /* фиксируем реальное разрешение canvas = композиции */
+  anim.addEventListener('DOMLoaded', () => {
+    const canvas = container.querySelector('canvas');
+    canvas.width = 1440;
+    canvas.height = 7477;
+  });
 </script>
+
 </body>
 </html>
