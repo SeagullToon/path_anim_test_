@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Services Grid</title>
+
+  <style>
+    body {
+      margin: 0;
+      background: #ffffff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      font-family: "Josefin Slab", serif;
+    }
+
+    .container {
+      display: grid;
+      grid-template-columns: repeat(2, 260px);
+      gap: 20px;
+    }
+
+    .card {
+      position: relative;
+      width: 260px;
+      aspect-ratio: 1 / 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .card img {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+
+    .card span {
+      position: relative;
+      font-weight: 700;
+      font-size: 32px;
+      text-align: center;
+      color: #000;
+    }
+
+    .card.double-line span {
+      line-height: 1.1;
+    }
+  </style>
+</head>
+
+<body>
+
+<div class="container">
+
+  <div class="card">
+    <img src="img/intersect-3.svg" alt="">
+    <span>TRAINING</span>
+  </div>
+
+  <div class="card">
+    <img src="img/intersect.svg" alt="">
+    <span>CONSULTING</span>
+  </div>
+
+  <div class="card double-line">
+    <img src="img/image.svg" alt="">
+    <span>INVESTMENT<br>PROGRAM</span>
+  </div>
+
+  <div class="card">
+    <img src="img/intersect-2.svg" alt="">
+    <span>EDUCATION</span>
+  </div>
+
+</div>
+
+</body>
+</html>

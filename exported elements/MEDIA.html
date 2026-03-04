@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Media Section</title>
+
+  <style>
+    body {
+      margin: 0;
+      background: #000;
+      font-family: "Josefin Slab", serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    .media-section {
+      width: 100%;
+      max-width: 1200px;
+      padding: 60px 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+    }
+
+    .media-title {
+      font-size: 48px;
+      font-weight: 600;
+      color: white;
+    }
+
+    .media-row {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .media-card {
+      width: 280px;
+      height: 125px;
+      border-radius: 24px;
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      background: rgba(255, 255, 255, 0.15);
+      border: 1px solid rgba(255,255,255,0.3);
+      transition: 0.3s ease;
+      cursor: pointer;
+    }
+
+    .media-card:hover {
+      background: rgba(255, 255, 255, 0.25);
+      transform: translateY(-4px);
+    }
+  </style>
+</head>
+
+<body>
+
+<section class="media-section">
+
+  <div class="media-title">MEDIA (ADD LINKS)</div>
+
+  <div class="media-row">
+    <div class="media-card"></div>
+    <div class="media-card"></div>
+    <div class="media-card"></div>
+    <div class="media-card"></div>
+    <div class="media-card"></div>
+  </div>
+
+</section>
+
+</body>
+</html>
