@@ -52,15 +52,19 @@
     renderer: 'canvas',
     loop: true,
     autoplay: true,
-    path: 'data.json'
+    path: 'data.json',
+
+    rendererSettings: {
+      preserveAspectRatio: 'xMidYMin meet'
+    }
   });
 
-  /* фиксируем реальное разрешение canvas = композиции */
-  anim.addEventListener('DOMLoaded', () => {
-    const canvas = container.querySelector('canvas');
-    canvas.width = 1440;
-    canvas.height = 7477;
-  });
+  // /* фиксируем реальное разрешение canvas = композиции */
+  // anim.addEventListener('DOMLoaded', () => {
+  //   const canvas = container.querySelector('canvas');
+  //   canvas.width = 1440;
+  //   canvas.height = 7477;
+  // });
 </script>
 
 </body>
